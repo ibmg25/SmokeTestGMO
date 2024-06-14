@@ -1,7 +1,7 @@
 Feature: SmokeTest
   As a client
-  I want to select products to buy
-  So that I can verify that the purchase process works correctly and the total amount is accurate
+  I want to select products, make a purchase and complete billing process
+  So that I know that the purchase process works correctly and the total amount is accurate
 
   Background:
    Given I am on the GMO 
