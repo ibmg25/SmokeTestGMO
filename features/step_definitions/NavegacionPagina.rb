@@ -23,7 +23,16 @@ When('Press the {string}') do |name_button|
     end
 end
 
-Then('I should see title text {string} in {string}') do |title, css_selector|
-    expected_text = find(css_selector).text
+Then('I should see title text {string} in the page') do |title|
+    if title === "About This Site"
+        expected_text = find('body > table > tbody > tr > td:nth-child(1) > h1').text
+    end
+    if title === "All Browsers Are Not Created Equal"
+        expected_text = find('body > h1 > font').text
+    end
+    if title === "OnLine Catalog"
+        expected_text = find('body > table > tbody > tr > td:nth-child(1) > h1').text
+    end
+
     expect(expected_text).to eq(title)
 end
